@@ -1,0 +1,332 @@
+:root{
+   --logo-width:180px;
+   --navbar-height: 70px;
+}
+body{
+    margin: 0;
+   
+}
+* {
+    box-sizing: border-box;
+  /* de cac div con ke thua thang cha */
+}
+
+html{
+    font-size: 62.5%;
+    line-height: 1.6rem;
+    font-family: "Times New Roman", "游明朝", "Yu Mincho", "游明朝体", "YuMincho", "ヒラギノ明朝 Pro W3", "Hiragino Mincho Pro", "HiraMinProN-W3", "HGS明朝E", "ＭＳ Ｐ明朝", "MS PMincho", serif !important;
+    box-sizing: border-box;
+}
+/*Reponsive  -- Cap bac reponsive
+.grid{
+    .row{
+        c.column
+         c.column
+    }
+    .row{
+        c.column
+         c.column
+    }
+}
+*/
+
+.grid__row{
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -5px;
+    margin-right: -5px;
+}
+
+/*Test*/
+.grid__column-2{
+padding-left: 5px;
+padding-right: 5px;
+width: 16.6667%; /*2/12 * 100% */
+}
+.grid__column-2-4{
+    width: 20%;/*dang nhe ra la pha 20% nhung chua tim dc li do nen chuyen ra 19 no moi d 5sp/hang */
+    padding-left: 5px;
+padding-right: 5px;
+}
+.grid__column-10{
+    padding-left: 5px;
+    padding-right: 5px;
+    width: 83.3334%;/*8/12 * 100% */
+}
+    
+/* amition lm xuat hien dan dan */
+@keyframes fade-in {
+    from {
+    opacity: 0;
+    }
+    to {
+    opacity: 1;
+    }
+}
+@keyframes growth{
+    from {
+        transform: scale(var(--growth-from));
+        }
+        to {
+            transform: scale(var(--growth-to));
+        }
+}
+@keyframes headerNotifyGrowth{
+    from{
+        opacity: 0;
+        transform: scale(0);
+    }
+    to{
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+.modal{
+    position: fixed;
+    top:0;
+    right: 0;
+    left: 0;
+    bottom:0; 
+    display: flex;
+    animation: fade-in linear 0.25s;
+  
+}
+.modal__overlay{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+/*han mobile*/
+.ovelay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    display: none;
+    animation: fade-in linear 0.25s;
+}
+.modal__body{
+    width: 500px;
+    height: 500px;
+    background-color:#ffffff;
+    margin: auto;
+  position:relative;
+  z-index: 1;
+  border-radius: 5px;
+  --growth-from:0.7; /* Tu 70 %*/
+  --growth-to : 1 ;/* Tu 100 %*/
+  animation: growth linear 0.25s;
+}
+/*Button style*/
+.btn{
+    min-width: 124px;
+    height: 34px;
+    text-decoration: none;
+    border: none;
+    border-radius: 2px;
+    font-size: 1.4rem;
+    padding: 0 10px;
+    outline: none;
+    color: var(--font-color);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1.6rem;
+    background-color: #ffffff;
+}
+.btn-back:hover{
+    background-color: rgba(0, 0, 0, 0.05)
+}
+.btn.btn--primary{
+    color: var(--white-color);
+    background-color: var(--primary-color);
+
+}
+/* style cho button fb va gg o form dki*/
+.btn-size--s{
+    height: 32px;
+    font-size: 12px;
+    padding: 0 7px;
+    margin: 0 -36px;
+}
+
+.btn--withicon-fb{
+    background-color: #3a5a98;
+    color: var(--white-color);
+}
+.btn--withicon-gg{
+    background-color: #96938e27;
+    color: var(--font-color);
+}
+.auth-label{
+    margin: 0 18px;
+    
+}
+.style-icon--fb{
+     color: var(--white-color);
+    
+}
+.style-icon--gg{
+    color: #333;
+   
+}
+
+
+
+/*Ket thuc Animition muốn sử dụng thì vào css div của div cần làm và dùng cú pháp
+animation : tên của keyframes trên kia và hiệu ứng ease chẳng hạn và + số giây*/
+/*Seclection */
+.select-input{
+    min-width: 200px;
+    height: 34px;
+    padding: 0 12px;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+.select-input__label{
+    font-size: 1.4rem;
+    color: rgb(82 ,82,82);
+}
+
+ .select-input__list{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 35px;
+    border-radius: 2px;
+    background-color: #ffff;
+    padding-left: 0;
+    list-style: none;
+    margin: 0;
+    display: none;
+    z-index: 1;
+ }
+ .select-input:hover .select-input__list{
+     display: block;
+ }
+ .select-input__link:hover{
+     color: var(--primary-color);
+ }
+ .select-input__link{
+     text-decoration: none;
+     font-size: 1.3rem;
+     color: #555;
+ }
+ .select-input__item{
+     margin: 8px 12px;
+ }
+ /*Phan trang */
+ .pagination{
+display: flex;
+align-items: center;
+justify-content: center;
+list-style: none;
+
+ }
+ .pagination-item{
+margin: 0 15px;
+ }
+ .pagination-item-active .pagination-item__link{
+     background-color: var(--primary-color);
+     color: #ffffff;
+ }
+ .pagination-item-active .pagination-item__link:hover{
+background-color: #ed5c3f;
+ }
+ .pagination-item__link{
+     --height:30px;
+     display: block;
+text-decoration: none;
+font-size: 2rem;
+font-weight: 300;
+color: #939393;
+min-width: 40px;
+height: var(--height);
+line-height: var(--height);
+text-align: center;
+border-radius: 2px;
+ }
+ .pagination-item__icon{
+
+ }
+
+
+
+ /*************************************Buttom of MIKIDO*/
+ .btn__slide{
+   
+
+    padding: 0 10px;
+    border: none;
+    border-radius: 2px;
+    outline: none;
+    display: flex;
+    flex: 1;
+     align-items: center;
+     justify-content: center;
+     margin: 60px 100px 0;
+ }
+
+ .btn__slide-box{
+     background: #333;
+     display: inline-block;
+    text-align: center;
+     min-width: 240px;
+     height: 60px;
+    line-height: 60px;
+    text-decoration: none;
+ }
+ .btn__slide h3{
+    font-size: 1.4rem;
+    color:#ffff;
+    
+ }
+ .btn__slide-box:hover, .btn__slide-text:hover{
+    background: #d80100;
+ }
+
+ .l-inner {
+    position: relative;
+    width: 92.1875%;
+    max-width: 1160px;
+    margin-right: auto;
+    margin-left: auto;
+ }
+/*dung cho thne befor co man hinh den de chu dc thay ro*/
+.clear{
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 3;
+}
+ /*Can deu top,bot 100px*/
+ .justify{
+position: relative;
+padding-bottom: 100px;
+    padding-top: 100px;
+ }
+ .vertical-text{
+   writing-mode: vertical-rl;
+}
+ .flex-style{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row-reverse;
+ }
+ .Fix-zindex{
+     position:relative;
+     top: 0;
+     z-index: 2;
+ }
+
+
+
+

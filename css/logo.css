@@ -1,0 +1,491 @@
+body{
+	font-family: "Segoe UI", Verdana, "游ゴシック", YuGothic, "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+
+
+}
+*{
+	margin: 0;
+	padding: 0;
+}
+.bigheader{
+	position: relative;
+    width: 100%;
+    height: 670px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+}/*NEu dung video lm backgound thi nen co doan nay
+de cho full man hinh k bi vo layuot
+*/
+/*de fix khi float or dan trang*/
+.clearfix::after{
+	content: ".";
+	visibility: hidden;
+	display: block;
+	clear: both;
+
+}
+/*Header */
+
+.p-logoset{
+	width: 180px;
+	border: solid 1px #fff;
+	padding: 40px 0px;
+	position: absolute;
+	left: 5rem;
+	top: 0;
+}
+.p-logoset h1{
+left: 130px;
+}
+.p-logoset img{
+	display: block;
+	height: auto;
+	margin: auto;
+	max-width: 65%;
+}
+.p-logoset h2{
+	color: #fff;
+	font-size: 14px;
+	line-height: 1.6;
+	text-align: center;
+	margin: 30px 0 0 0;
+	font-family: "Times New Roman", "游明朝", "Yu Mincho", "游明朝体", "YuMincho", "ヒラギノ明朝 Pro W3", "Hiragino Mincho Pro", "HiraMinProN-W3", "HGS明朝E", "ＭＳ Ｐ明朝", "MS PMincho", serif !important;
+	display: grid;
+}
+.js-global-nav{
+    font-family: "Times New Roman", "游明朝", "Yu Mincho", "游明朝体", "YuMincho", "ヒラギノ明朝 Pro W3", "Hiragino Mincho Pro", "HiraMinProN-W3", "HGS明朝E", "ＭＳ Ｐ明朝", "MS PMincho", serif;
+	float: right;
+	/*heigt va width auto de cho layout bao tron
+	ul
+	*/
+	height: auto;
+	width: auto;
+
+    align-items: center;
+	justify-content: center;
+	margin: 4rem 6rem;
+}
+
+
+.js-global-nav ul{
+	display: inline-flex;/*de xuong dong chu*/
+}
+.js-global-nav li{
+	padding-left: 20px;
+	writing-mode: vertical-lr;
+	font-size: 18px;
+	width: 45px;
+	list-style: none;
+	
+}
+.js-global-nav  ul li  a{
+color: #fff;
+z-index: 999;
+text-decoration: none;
+transition: transform 0.5s ease;/* thoi gian len xuong*/
+writing-mode: vertical-rl;/*phai co dong nay moi len xuong dc vi 
+wirting-mode: chu dang dung
+*/
+
+}
+
+.js-global-nav  ul li a:hover{
+	transform: translateY(12px);
+	/*khi hover: len xuong*/
+}
+/*video Begin^-------------------*/
+.video-page {
+display: block;
+position:absolute;
+top: 0px;
+left: 0px;
+height: 100%;
+width: 100%;
+object-fit: cover;
+z-index: -20;
+
+}
+
+#main-1 , #main-2{
+	height: 323px;
+}
+#main-1::before ,#main-2::before {
+	background: rgba(0,32,64, 0.300000);
+	}
+.main-nikai::before ,.mainbg::before , .js-global-nav::after , .header-page::after{
+		display: block;
+		z-index: -1 ;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		content: "";
+	}
+	.title {
+		position:relative;
+		top: -100px;
+		left: 0;
+		height: 300px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		font-family: "Times New Roman", "游明朝", "Yu Mincho", "游明朝体", "YuMincho", "ヒラギノ明朝 Pro W3", "Hiragino Mincho Pro", "HiraMinProN-W3", "HGS明朝E", "ＭＳ Ｐ明朝", "MS PMincho", serif;
+		font-size: 41.6px;
+		color: #fff;
+		margin-top: 48px;
+		
+	}
+	
+	.content__title {
+		font-weight: 700;
+		line-height: 1.3;
+		padding: 0 0;
+	}
+	.content__title span {
+		text-align: start;
+		-webkit-writing-mode: vertical-rl;
+		-ms-writing-mode: tb-rl;
+		writing-mode: vertical-rl;
+		/*字を垂直に書く―chu thag dung*/
+		white-space: nowrap;
+		min-width: 0;
+		margin: auto;
+		font-size: 30px
+		;
+	}
+	
+/*---------------------------------*/
+/*COntent BEgin*/
+
+.content-title{
+	background: #ffff;
+	max-width: 100%;
+	height: 600px;
+	padding-top: 61px;
+}
+.content-clear{
+	zoom: 1;
+}
+.content-clear::after{
+	clear: both;
+    content: ".";
+    display: block;
+    height: 0;
+    line-height: 0;
+    visibility: hidden;
+}
+p.content-logo , h2{
+	text-align: center;
+	font-family: "Times New Roman", "游明朝", "Yu Mincho", "游明朝体", "YuMincho", "ヒラギノ明朝 Pro W3", "Hiragino Mincho Pro", "HiraMinProN-W3", "HGS明朝E", "ＭＳ Ｐ明朝", "MS PMincho", serif;
+font-size: 40px;
+}
+
+p.content-logo img{
+	height: 50px;
+	width: auto;
+}
+.slide-left{
+	clear: both;
+}
+.slide{
+	display: flex;
+	justify-content: space-between;
+	padding: 0 15px;
+	max-width: 1120px;
+	width: 100%;
+	margin: 0 auto;
+}
+.slide .content-bar{
+	width:21%;
+	height: 180px;
+	position: relative;
+	top:0;
+	left: 0;
+	
+	
+}
+
+.btn-item{
+    height: 100%;
+	width: 100%;
+	background: rgba(0, 0, 0, 0.5);
+    
+}
+.btn-item a{
+	color: #fff;
+	text-decoration: none;
+z-index: 1000;
+}
+
+.title::before {
+	clear: both;
+	content: "";
+	display: block;height: 50px;
+	line-height: 0;
+	visibility: hidden;
+}
+ .slide::after , .slide::before,.content-bar::after , .content-bar::before{
+	clear: both;
+/*clear: both, có nhiệm vụ dọn dẹp 2 bên đường,
+ và chui vào nằm ở vị trí dưới cùng,
+ từ đó nó sẽ "kéo" thẻ div cha về lại đúng chiều cao của nó.
+ DUg cho 1 hang co nhieu phan tu */
+ 
+}
+.giua{
+	position: absolute;
+	top: 0;
+	left: 0;
+	justify-content: center;
+	align-items: center;
+	 display: flex;
+	/*Thuoc tính này để dùng chung cho các phần từ gioosbg nhau
+	căn đều giữa */ 
+}
+ .inner{
+	padding: 18px 20px;
+    min-height: 112px;
+	width: auto;
+	position: relative;
+	top:-4px;
+	left: 0;
+	border: 1px solid #333333;
+ }
+.btn-item::after , .btn-item::before , .btn-item{
+	transition: .4s;
+	transition-delay: .15s;
+	opacity: 0;
+	/*để cho btn-item k xuất hiện nền đen và dấu gạch*/
+}
+.btn-item::before{
+content: '';
+position: absolute;
+top: 40px;
+bottom: 40px;
+left: 10px;
+right: 10px;
+border-bottom: 1px solid #fff;
+border-top: 1px solid #fff;
+transform: scale(0,1);
+transform-origin: 100% 0;
+}
+.btn-item::after{
+	content: '';
+	position: absolute;
+	top: 10px;
+	bottom: 10px;
+	left: 40px;
+	right: 40px;
+	border-left: 1px solid #fff;
+	border-right: 1px solid #fff;
+	transform: scale(1,0);/*phai sang trai*/
+	transform-origin: 0 0;
+	}
+.btn-item:hover::after , .btn-item:hover::before{
+	opacity: 1;
+	transform: scale(1);
+	/*khi hove se co hieu ung */
+}
+.btn-item:hover{
+	opacity: 1;/*khi hover sẽ xuất hiện lại nền đen và dấu gạch*/
+}
+/*----------------------------*/
+/*content-title*/
+.content-clear h2, .content-logo,.slide{
+margin-top: 40px;
+}
+.m-list{
+	width: 100%;
+	height: auto;
+	position: relative;
+	top: 65px;
+	text-align: center;
+}
+
+.more a{
+	background-color:black;
+	color: #fff;
+	display: inline-block;
+	font-size: 14px;
+	font-weight: bold;
+	height: 48px;
+	line-height: 48px;
+	min-width: 194px;
+	padding: 0 19px;
+	text-align: center;
+	text-decoration: none;
+	margin-bottom: 20px;
+	
+}
+.more a:hover{
+	background-color: #303131;
+}
+/*content-title nikai----------------------*/
+.nikai{
+	background: #efefef;
+	position: absolute;
+	width: 100%;
+    height: auto;
+}
+.more-tatte{
+	padding: 40px 0;
+}
+.more-tatte a{
+	background-color:black;
+	color: #fff;
+	display: inline;
+	font-size: 14px;
+	font-weight: bold;
+	line-height: 300px;
+	min-width: 194px;
+	padding: 53px 19px;
+	text-align: center;
+	text-decoration: none;
+	
+}
+.more-tatte a:hover{
+	background-color: #303131;
+}
+.nikai-anh{
+	height: 100%;
+    width: 100%;
+    object-fit: cover;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 1;
+}
+.conner{
+	position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 3;
+}
+.conner-in{
+	
+ display: flex;
+    flex-direction: row-reverse;
+   
+    justify-content: center;
+    line-height: 1.3;
+    max-height: 100%;
+	padding: 50px 0;
+	margin: 0 0;
+    position: absolute;
+    
+}
+.conner-text{
+	color: #ffffff;
+	font-size: 36px;
+	writing-mode: vertical-rl;
+	word-wrap: break-word;
+	overflow-wrap: break-word;
+    text-align: start;
+	margin: 0;
+	padding: 35px 0;
+}
+.conner-list{
+	box-decoration-break: inherit;
+	writing-mode: vertical-rl;
+	
+}
+/*End nikai----------------*/
+
+/*Start -----  Sankai--------*/
+.sankai{
+	position: relative;
+	width: 92.1875%;
+	top:570px;
+    max-width: 1160px;
+    margin-right: auto;
+	margin-left: auto;
+	z-index: 5; /*vi o nikai co dunng chen hinh video voi
+	z-index= - nen phai dung >5 de no hien thi ra*/
+}
+
+.sankai-item{
+	display: flex;
+	flex-wrap: wrap;
+    justify-content: space-between;
+	margin-bottom: -40px;
+	/*day la set de dan ul li nhu trong bai
+	css o UL nhe
+	*/
+}
+
+.sankai-item ul{
+	list-style: none;
+}
+.sankai-item-list{
+	display: block;
+    width: calc(50% - 20px);
+    margin-bottom: 40px;
+    height: 100%;
+	position:relative;
+	top:30px;
+/*neu muon lam cai hieu ung nen toi di:
+
+thangnay chua cai div inside, ma inside::before co chuyen nen
+thanh mau toi, vi the der cho cai nen den no vua khit cai khung
+anh(chinh la khung cua li) thi bat buoc li phai co relative va cai 
+th ::before cung phai co absolute
+ */
+}
+.sankai-inside{
+	overflow: hidden;
+	height: 160px;
+}
+.sankai-inside::before{
+	z-index: 1;
+    position: absolute;
+    top:0px;
+    left: 0;
+   width: 100%;
+	height: 100%;
+	background: linear-gradient(to right, rgba(0, 0, 0, 0.75) 0%, transparent 75%);
+	/*chinh cho cho toi cho sang*/
+    content: "";
+}
+.sankai-inside img{
+	transition-duration: 0.3s;
+	width: 100%;
+    height: 100% !important;
+    object-fit: cover;
+}
+.sankai-inside img:hover{
+	transform: scale(1.2);
+}
+.sankai-list-text{
+	z-index: 1;
+    position: absolute;
+    top: 45%;
+    left: 0;
+    right: 0;
+    padding: 0 40px;
+    transform: translateY(-50%);
+    color: #fff;
+	pointer-events: none;/*khi hover thi cai khung nay giu 
+	nguyen , k hieu tim hieu ve pointer-event*/
+    max-height: 100%;
+}
+.sankai-list-text p{
+	line-height: 1.6;
+	font-size: 14px;
+	
+}
+.sankai-list-text h3{
+	font-size: 24px;
+    line-height: 1.6;
+    padding: 0;
+    margin: 0;
+    max-height: 1.6em;
+   
+}

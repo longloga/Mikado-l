@@ -1,0 +1,51 @@
+.content-img{
+    display: flex;
+  line-height: 0;
+}
+.content-img_item img{
+    display: block;
+    height: auto;
+    width: 100%;
+}
+.container-sanpai{
+    margin-bottom: 150px;
+}
+.sanpai-box{
+    border: solid 1px #dddddd;
+    margin-bottom: 50px;
+}
+.content-text{
+font-size: 2rem;
+line-height: 3.6rem;
+font-weight: 500;
+padding: 50px 78px;
+display: flex;
+    justify-content: space-between;
+
+}
+.col-desc{
+    flex: 1 1 100%; /*Chia deu layout*/
+}
+.col-desc:nth-child(1){
+    margin-right: 35px;
+}
+.sanpai-table{
+    width: 100%;
+    font-size: 1.6rem;
+    border-collapse: collapse;/*de cho cac cot dinh vao voi nhau chu k se bi tach ra 1 chut*/
+}
+
+.sanpai-table > tbody > tr > th {
+   font-size: 2.2rem;
+   background-color: #f7f7f7;
+   width: 230px;
+   border: solid 1px #dddddd;
+}
+.narrow{
+    width: 230px;
+}
+.sanpai-table > tbody > tr > td{
+    padding: 28px 45px;
+    border: solid 1px #dddddd;
+    line-height: 1.3;
+}
